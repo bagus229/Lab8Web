@@ -1,0 +1,170 @@
+/* Styling Umum untuk Kedua Halaman */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Latar belakang putih penuh */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 13px; /* Font size yang lebih kecil, mirip browser default */
+}
+
+.container {
+    width: 100%;
+    /* Atur lebar maksimum agar konten fokus di tengah seperti tampilan browser default */
+    max-width: 900px; 
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+/* Header */
+h1 {
+    color: #000000;
+    font-weight: bold;
+    font-size: 2em;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Gaya untuk Halaman Data Barang (index.php) */
+/* ---------------------------------------------------------------------- */
+
+/* Link "Tambah Barang" */
+.main > a {
+    color: #0000ff; /* Warna biru link default */
+    text-decoration: underline;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+/* Tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+th, td {
+    border: 1px solid #000000; /* Border hitam solid seperti di gambar */
+    padding: 5px 8px; /* Padding minimal */
+    text-align: left;
+    font-weight: normal; /* Data sel biasa */
+}
+
+th {
+    background-color: #d3d3d3; /* Background abu-abu muda di header tabel */
+    font-weight: bold; /* Judul kolom tebal */
+    color: #000000;
+    text-align: center; 
+    vertical-align: middle;
+}
+
+/* Penataan Khusus Kolom Aksi */
+td:last-child {
+    text-align: center;
+    white-space: nowrap;
+}
+
+td:last-child a {
+    color: #0000ff;
+    text-decoration: underline;
+    margin: 0 3px;
+    display: inline;
+}
+
+/* Penataan Khusus Kolom Harga dan Stok (agar lebih ke kanan, seperti angka) */
+td:nth-child(4), td:nth-child(5), td:nth-child(6) {
+    text-align: right;
+}
+
+/* Gambar di Tabel (jika ada) */
+td img {
+    max-width: 50px;
+    max-height: 50px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Gaya untuk Halaman Tambah Barang (tambah.php) */
+/* ---------------------------------------------------------------------- */
+
+.main form {
+    /* Padding dan margin agar form sejajar dengan judul dan batas container */
+    padding: 0;
+}
+
+.input {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 5px; /* Jarak antar baris input yang rapat */
+}
+
+label {
+    width: 120px; /* Lebar yang lebih spesifik untuk label */
+    font-weight: normal;
+    color: #000000;
+    text-align: left;
+    padding-right: 10px;
+    line-height: 25px; /* Membantu menyelaraskan label dengan input */
+}
+
+input[type="text"], 
+select {
+    flex-grow: 1; 
+    padding: 2px; /* Padding input yang minimal */
+    border: 1px solid #999; /* Border abu-abu, bukan hitam tebal */
+    box-sizing: border-box;
+    height: 20px; /* Tinggi input yang lebih rendah */
+    max-width: 300px; /* Batasan lebar input */
+}
+
+select {
+    max-width: 150px; /* Batasan lebar select */
+}
+
+/* Input File */
+input[type="file"] {
+    flex-grow: 1;
+    padding: 0;
+    border: none;
+    max-width: none;
+    height: auto;
+}
+
+/* Tombol Telusuri/Choose File */
+input[type="file"]::-webkit-file-upload-button {
+    /* Hanya untuk browser berbasis WebKit/Chrome/Edge */
+    background-color: #e0e0e0;
+    border: 1px solid #888;
+    padding: 2px 5px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+
+/* Styling untuk tombol Simpan */
+.submit {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+    margin-left: 120px; /* Geser tombol agar sejajar dengan input */
+}
+
+input[type="submit"] {
+    background-color: #007bff; /* Warna biru */
+    color: white;
+    padding: 3px 10px; /* Padding minimal untuk tombol */
+    border: 1px solid #0056b3;
+    border-radius: 0; /* Tanpa border radius */
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
